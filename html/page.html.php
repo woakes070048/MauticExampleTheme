@@ -12,29 +12,8 @@ $title = (!empty($parentVariant)) ? $parentVariant->getTitle() : $page->getTitle
 $view['slots']->set('public', (isset($public) && $public === true) ? true : false);
 $view['slots']->set('pageTitle', $title);
 ?>
-<?php if ($view['slots']->hasContent(array('page_title1', 'page_description1'))): ?>
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <?php if ($view['slots']->hasContent('page_title1')): ?>
-                    <h1>
-                        <?php $view['slots']->output('page_title1'); ?>
-                    </h1>
-                <?php endif; ?>
-                <?php if ($view['slots']->hasContent('page_description1')): ?>
-                    <hr>
-                    <?php $view['slots']->output('page_description1'); ?>
-                <?php endif; ?>
-                <?php if ($view['slots']->hasContent('page_button1')): ?>
-                    <a href="#about" class="btn btn-primary btn-xl page-scroll"><?php $view['slots']->output('page_button1'); ?></a>
-                <?php endif; ?>
-            </div>
-        </div>
-    </header>
-<?php endif; ?>
-
 <?php if ($view['slots']->hasContent(array('page_title2', 'page_description2'))): ?>
-    <section class="bg-primary" id="about">
+    <section class="bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -48,7 +27,7 @@ $view['slots']->set('pageTitle', $title);
                         </div>  
                     <?php endif; ?>
                     <?php if ($view['slots']->hasContent('page_button2')): ?>
-                        <a href="#" class="btn btn-default btn-xl"><?php $view['slots']->output('page_button2'); ?></a>
+                        <a href="#page" class="btn btn-default btn-xl"><?php $view['slots']->output('page_button2'); ?></a>
                     <?php endif; ?>
                     <!--                </div>-->
                 </div>
@@ -58,7 +37,7 @@ $view['slots']->set('pageTitle', $title);
 <?php endif; ?>
 
 <?php if ($view['slots']->hasContent(array('page_title3', 'page_description3'))): ?>
-    <section id="contact">
+    <section id="page">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
