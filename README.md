@@ -1,0 +1,3 @@
+# MauticExampleTheme
+
+Free Mautic theme
